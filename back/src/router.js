@@ -6,7 +6,7 @@ const extractLogo = (id) => new Promise(async (resolve, reject) => {
         url: `https://s2.coinmarketcap.com/static/img/coins/16x16/${id}.png`,
         method: 'get',
         headers: {
-            'X-CMC_PRO_API_KEY': '04e2d21e-d199-4c5b-a009-1370fe027a22',
+            'X-CMC_PRO_API_KEY': 'key',
             'Accept': 'application/json',
         }
     },  (err, resp, body) => {
@@ -32,7 +32,7 @@ app.get('/', async (req, res) => {
         },
         encoding: null,
         headers: {
-            'X-CMC_PRO_API_KEY': '04e2d21e-d199-4c5b-a009-1370fe027a22',
+            'X-CMC_PRO_API_KEY': 'key',
             'Accept': 'application/json',
             }
     }, async (err, resp, b) => {
