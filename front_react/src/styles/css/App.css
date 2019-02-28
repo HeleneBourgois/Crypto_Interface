@@ -1,0 +1,36 @@
+body {
+  padding: 38px;
+}
+body .input-fields {
+  display: flex;
+  padding-bottom: 25px;
+}
+body .input-fields .currency-input {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+body .input-fields .currency-input .input-number {
+  margin-left: 17px;
+}
+body .spinner-position {
+  display: flex;
+  justify-content: center;
+}
+body .cryptos-list-table tr:nth-child(even) {
+  background-color: #f4f4f4;
+}
+body .cryptos-list-table tr:nth-child(odd) {
+  background-color: white;
+}
+body .cryptos-list-table .red {
+  color: red;
+}
+body .cryptos-list-table .green {
+  color: green;
+}
+body .cryptos-list-table .blue {
+  color: #477fad;
+}
+
+/*# sourceMappingURL=App.css.map */
