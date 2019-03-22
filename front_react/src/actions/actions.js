@@ -31,7 +31,12 @@ export const setCurrency = (currency, limit) => {
             }
         })
         .then(function(response) {
-            return dispatch(setSuccess(response))
+            console.log(response, 'response')
+            return dispatch({
+                type: SET_CURRENCY,
+                payload: response.data
+            })
+            //setSuccess(response))
         })
         .catch( function(error) {
             return dispatch(setError(error))

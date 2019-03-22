@@ -6,7 +6,7 @@ const extractLogo = (id) => new Promise(async (resolve, reject) => {
         url: `https://s2.coinmarketcap.com/static/img/coins/16x16/${id}.png`,
         method: 'get',
         headers: {
-            'X-CMC_PRO_API_KEY': 'key',
+            'X-CMC_PRO_API_KEY': '04e2d21e-d199-4c5b-a009-1370fe027a22',
             'Accept': 'application/json',
         }
     },  (err, resp, body) => {
@@ -21,7 +21,6 @@ const extractLogo = (id) => new Promise(async (resolve, reject) => {
 app.get('/', async (req, res) => {
     const currency = req.query && req.query.currency ? req.query.currency : 'USD'
     const limit = req.query && req.query.limit ? req.query.limit : 100
-
     request({
         url: 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest',
         method: 'get',
@@ -32,7 +31,7 @@ app.get('/', async (req, res) => {
         },
         encoding: null,
         headers: {
-            'X-CMC_PRO_API_KEY': 'key',
+            'X-CMC_PRO_API_KEY': '04e2d21e-d199-4c5b-a009-1370fe027a22',
             'Accept': 'application/json',
             }
     }, async (err, resp, b) => {

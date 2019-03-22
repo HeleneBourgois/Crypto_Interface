@@ -57,10 +57,10 @@ class Listing extends Component {
         if (this.props && value) {
             this.setState({ loading: true })
             const data = await this.props.setCurrency(value, this.state.size) 
-            if (data && data.payload && data.payload.data) {
+            if (data && data.payload && data.payload) {
                 this.setState({
-                    cryptos: data.payload.data,
-                    initial: data.payload.data,
+                    cryptos: data.payload,
+                    initial: data.payload,
                     currency: value,
                     loading: false
                 })

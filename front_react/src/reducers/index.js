@@ -1,7 +1,8 @@
 import {
     SET_START,
     SET_SUCCESS,
-    SET_ERROR
+    SET_ERROR,
+    SET_CURRENCY
 } from '../actions/actions'
 
 const defaultState = {
@@ -15,20 +16,29 @@ const rootReducer = async (state = defaultState, action) => {
           return {
             ...state,
             loading: true
-          };
-        case SET_SUCCESS:
+          }
+        case SET_CURRENCY:
+        console.log('ici')
           return {
             ...state,
             loading: false,
             error: null,
             currency: {...state, data: action.payload}
-          };
+          }
+        case SET_SUCCESS:
+        console.log('succss')
+          return {
+            ...state,
+            loading: false,
+            error: null,
+            currency: {...state, data: action.payload}
+          }
         case SET_ERROR:
           return {
             ...state,
             loading: false,
             error: action.payload.error
-          };
+          }
         default:
           return state;
     }
