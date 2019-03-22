@@ -18,7 +18,6 @@ const rootReducer = async (state = defaultState, action) => {
             loading: true
           }
         case SET_CURRENCY:
-        console.log('ici')
           return {
             ...state,
             loading: false,
@@ -26,7 +25,6 @@ const rootReducer = async (state = defaultState, action) => {
             currency: {...state, data: action.payload}
           }
         case SET_SUCCESS:
-        console.log('succss')
           return {
             ...state,
             loading: false,
